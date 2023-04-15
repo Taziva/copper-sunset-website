@@ -86,7 +86,7 @@ const Footer = () => {
                       <i>
                         <FontAwesomeIcon icon={['fas', 'headphones']} />
                       </i>
-                      <span>+27 63 135 8276</span>
+                      <span>(+27) 63 135 8276</span>
                     </li>
                   </ul>
                 </div>
@@ -116,7 +116,7 @@ const Footer = () => {
                       <i>
                         <FontAwesomeIcon icon={['fas', 'headphones']} />
                       </i>
-                      <span>+447729 610128</span>
+                      <span>(+44) 772 961 0128</span>
                     </li>
                   </ul>
                 </div>
