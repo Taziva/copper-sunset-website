@@ -1,34 +1,51 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import CustomSubscribeForm from "../../Elements/Subscribe/CustomSubscribeForm";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CustomSubscribeForm from '../../Elements/Subscribe/CustomSubscribeForm';
 
 const Footer = () => {
-
-	return (
-		<footer>
-			<div className="footer-area pt-200" style={{backgroundImage: `url(${'assets/img/bg/bg6.jpg'})`}}>
-				<div className="container">
-					<div className="footer-bg pb-50">
-						<div className="row">
-							<div className="col-xl-3 col-lg-3 col-md-6">
-								<div className="footer-wrapper mb-30">
-									<div className="footer-logo">
-										<a href="index.html"><img
-											src={require("../../../../public/assets/img/logo/copper-sunset-white.svg")} alt=""/></a>
-									</div>
-									{/* <div className="footer-text">
+  return (
+    <footer>
+      <div
+        className="footer-area pt-200"
+        style={{ backgroundImage: `url(${'assets/img/bg/bg6.jpg'})` }}>
+        <div className="container">
+          <div className="footer-bg pb-50">
+            <div className="row">
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="footer-wrapper mb-30">
+                  <div className="footer-logo">
+                    <a href="index.html">
+                      <img
+                        src={require('../../../../public/assets/img/logo/copper-sunset-white.svg')}
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  {/* <div className="footer-text">
 										<p>Lorem ipsum dolor amet cons adipisicing elit sed do eiusmod tempor incididunt
 											ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud
 											exercitation ullamco laboris nisi ut aliquip.</p>
 									</div> */}
-									<div className="footer-icon">
-										<a href="#"><i><FontAwesomeIcon icon={['fab', 'facebook-f']}/></i></a>
-										<a href="#"><i><FontAwesomeIcon icon={['fab', 'twitter']}/></i></a>
-										<a href="#"><i><FontAwesomeIcon icon={['fab', 'linkedin']}/></i></a>
-									</div>
-								</div>
-							</div>
-							{/* <div className="col-xl-3 col-lg-3 col-md-6">
+                  <div className="footer-icon">
+                    <a href="#">
+                      <i>
+                        <FontAwesomeIcon icon={['fab', 'facebook-f']} />
+                      </i>
+                    </a>
+                    <a href="#">
+                      <i>
+                        <FontAwesomeIcon icon={['fab', 'twitter']} />
+                      </i>
+                    </a>
+                    <a href="#">
+                      <i>
+                        <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="col-xl-3 col-lg-3 col-md-6">
 								<div className="footer-wrapper pl-45 mb-30">
 									<div className="footer-title">
 										<h4>Customer Support</h4>
@@ -44,51 +61,67 @@ const Footer = () => {
 									</ul>
 								</div>
 							</div> */}
-							<div className="col-xl-3 col-lg-3 col-md-6">
-								<div className="footer-wrapper pl-45 mb-30">
-									<div className="footer-title">
-										<h4>Contact Info <br/> South Africa</h4>
-										<img src={require("../../../../public/assets/img/shape/f.png")} alt="shape"/>
-									</div>
-									<ul className="fotter-link">
-										<li>
-											<i><FontAwesomeIcon icon={['far', 'paper-plane']}/></i>
-											<span>5 Meyer Road, Bordeaux, Randburg, 3370. 2194</span>
-										</li>
-										<li>
-											<i><FontAwesomeIcon icon={['far', 'envelope-open']}/></i>
-											<span>takasimba@coppersunset.org</span>
-										</li>
-										<li>
-											<i><FontAwesomeIcon icon={['fas', 'headphones']}/></i>
-											<span>+27 63 135 8276</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="col-xl-3 col-lg-3 col-md-6">
-								<div className="footer-wrapper pl-45 mb-30">
-									<div className="footer-title">
-										<h4>Contact Info <br/> United Kingdom</h4>
-										<img src={require("../../../../public/assets/img/shape/f.png")} alt="shape"/>
-									</div>
-									<ul className="fotter-link">
-										<li>
-											<i><FontAwesomeIcon icon={['far', 'paper-plane']}/></i>
-											<span>58 Holloway Road, London, N7 8JL</span>
-										</li>
-										<li>
-											<i><FontAwesomeIcon icon={['far', 'envelope-open']}/></i>
-											<span>shoniwa@coppersunset.org</span>
-										</li>
-										<li>
-											<i><FontAwesomeIcon icon={['fas', 'headphones']}/></i>
-											<span>+447729 610128</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-							{/* <div className="col-xl-3 col-lg-3 col-md-6">
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="footer-wrapper pl-45 mb-30">
+                  <div className="footer-title">
+                    <h4>
+                      Contact Info <br /> South Africa
+                    </h4>
+                    <img src={require('../../../../public/assets/img/shape/f.png')} alt="shape" />
+                  </div>
+                  <ul className="fotter-link">
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['far', 'paper-plane']} />
+                      </i>
+                      <span>1679 Taunton Cres, Dainfern, Midrand, 2055</span>
+                    </li>
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['far', 'envelope-open']} />
+                      </i>
+                      <span>takasimba@coppersunset.org</span>
+                    </li>
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['fas', 'headphones']} />
+                      </i>
+                      <span>+27 63 135 8276</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-3 col-md-6">
+                <div className="footer-wrapper pl-45 mb-30">
+                  <div className="footer-title">
+                    <h4>
+                      Contact Info <br /> United Kingdom
+                    </h4>
+                    <img src={require('../../../../public/assets/img/shape/f.png')} alt="shape" />
+                  </div>
+                  <ul className="fotter-link">
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['far', 'paper-plane']} />
+                      </i>
+                      <span>58 Holloway Road, London, N7 8JL</span>
+                    </li>
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['far', 'envelope-open']} />
+                      </i>
+                      <span>shoniwa@coppersunset.org</span>
+                    </li>
+                    <li>
+                      <i>
+                        <FontAwesomeIcon icon={['fas', 'headphones']} />
+                      </i>
+                      <span>+447729 610128</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              {/* <div className="col-xl-3 col-lg-3 col-md-6">
 								<div className="footer-wrapper pl-40 mb-30">
 									<div className="footer-title">
 										<h4>Newsletters</h4>
@@ -100,24 +133,24 @@ const Footer = () => {
 									<CustomSubscribeForm/>
 								</div>
 							</div> */}
-						</div>
-					</div>
-					<div className="footer-bottom-area">
-						<div className="row">
-							<div className="col-xl-12">
-								<div className="copyright text-center">
-									<p>
-										Copyright <FontAwesomeIcon icon={['far', 'copyright']}/> 2023 <a
-										href="#">Copper Sunset</a>. All
-										Rights Reserved</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	);
-}
+            </div>
+          </div>
+          <div className="footer-bottom-area">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="copyright text-center">
+                  <p>
+                    Copyright <FontAwesomeIcon icon={['far', 'copyright']} /> 2023{' '}
+                    <a href="#">Copper Sunset</a>. All Rights Reserved
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
