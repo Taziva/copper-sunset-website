@@ -1,44 +1,50 @@
-import React, {Component, useState , useEffect} from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BurgerMenus from './BurgerMenus';
 import Sidebar from './Sidebar';
 import SearchBar from './SearchBar';
 
 const Header3 = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchBarOpen, setSearchBarOpen] = useState(false);
 
-	const [menuOpen, setMenuOpen] = useState(false)
-	const [sidebarOpen, setSidebarOpen] = useState(false)
-	const [searchBarOpen, setSearchBarOpen] = useState(false)
+  const router = useRouter();
+  const [path, setPath] = useState('');
+  useEffect(() => {
+    setPath(router.pathname);
+  }, [router]);
 
-	const router = useRouter()
-	const [path, setPath] = useState("")
-	useEffect(() => {
-		setPath(router.pathname)
-	}, [router])
-
-
-	return (
-		<React.Fragment>
-			<header className="header-transparent">
-				<div id="sticky-header" className="main-menu-area header-3">
-					<div className="container-fluid">
-						<div className="row align-items-center">
-							<div className="col-xl-2 col-lg-2 col-md-4 col-6">
-								<div className="logo">
-									<Link href="/" as="/">
-										<a>
-											<img className="standard-logo" src={require("../../../../public/assets/img/logo/logo-white2.png")} alt="logo" />
-											<img className="retina-logo" src={require("../../../../public/assets/img/logo/logo-white2@2x.png")} alt="logo@2x" />
-										</a>
-									</Link>
-								</div>
-							</div>
-							<div className="col-xl-7 col-lg-7 d-none d-xl-block d-lg-block">
-								<div className="main-menu text-right f-right">
-									<nav id="mobile-menu">
-										<ul>
+  return (
+    <React.Fragment>
+      <header className="header-transparent">
+        <div id="sticky-header" className="main-menu-area header-3">
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              <div className="col-xl-2 col-lg-2 col-md-4 col-6">
+                <div className="logo">
+                  <Link href="/" as="/">
+                    <a>
+                      <img
+                        className="standard-logo"
+                        src={require('../../../../public/assets/img/logo/logo-white2.png')}
+                        alt="logo"
+                      />
+                      <img
+                        className="retina-logo"
+                        src={require('../../../../public/assets/img/logo/logo-white2@2x.png')}
+                        alt="logo@2x"
+                      />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-xl-7 col-lg-7 d-none d-xl-block d-lg-block">
+                <div className="main-menu text-right f-right">
+                  <nav id="mobile-menu">
+                    {/* <ul>
 											<li>
 												<Link href="/" as="/" ><a>home</a></Link>
 												<ul className="sub-menu text-left">
@@ -135,60 +141,67 @@ const Header3 = () => {
 													<a>Contact</a>
 												</Link>
 											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-							<div className="col-xl-3 col-lg-3 d-none d-xl-block d-lg-block">
-								<div className="header-right f-right">
-									<ul>
-										<li className="search-icon">
-											<a href="#" onClick={() => setSearchBarOpen(!searchBarOpen)}>
-												<i className="dripicons-search"></i>
-											</a>
-										</li>
-										<li className="unser-icon">
-											<a href="#">
-												<i className="dripicons-user"></i>
-											</a>
-										</li>
-										<li className="cart-icon">
-											<a href="#">
-												<i className="dripicons-cart"></i>
-											</a>
-											<span>2</span>
-										</li>
-										<li className={sidebarOpen ? "info-bar active" : "info-bar"}>
-											<a href="#" onClick={() => setSidebarOpen(!sidebarOpen)}>
-												<i className="dripicons-vibrate"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="d-block d-xl-none d-lg-none col-md-8 col-6 text-right">
-								<div className="menu-bar">
-									<button className="bars" onClick={() => {
-										setMenuOpen(!menuOpen)
-										}}>
-										<i> <FontAwesomeIcon icon={['fas', 'bars']} /></i>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+										</ul> */}
+                  </nav>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-3 d-none d-xl-block d-lg-block">
+                <div className="header-right f-right">
+                  <ul>
+                    <li className="search-icon">
+                      <a href="#" onClick={() => setSearchBarOpen(!searchBarOpen)}>
+                        <i className="dripicons-search"></i>
+                      </a>
+                    </li>
+                    <li className="unser-icon">
+                      <a href="#">
+                        <i className="dripicons-user"></i>
+                      </a>
+                    </li>
+                    <li className="cart-icon">
+                      <a href="#">
+                        <i className="dripicons-cart"></i>
+                      </a>
+                      <span>2</span>
+                    </li>
+                    <li className={sidebarOpen ? 'info-bar active' : 'info-bar'}>
+                      <a href="#" onClick={() => setSidebarOpen(!sidebarOpen)}>
+                        <i className="dripicons-vibrate"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="d-block d-xl-none d-lg-none col-md-8 col-6 text-right">
+                <div className="menu-bar">
+                  <button
+                    className="bars"
+                    onClick={() => {
+                      setMenuOpen(!menuOpen);
+                    }}>
+                    <i>
+                      {' '}
+                      <FontAwesomeIcon icon={['fas', 'bars']} />
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<BurgerMenus menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <BurgerMenus menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-				<div onClick={() => setMenuOpen(false)} className={menuOpen ? "body-overlay show" : "body-overlay"}></div>
+        <div
+          onClick={() => setMenuOpen(false)}
+          className={menuOpen ? 'body-overlay show' : 'body-overlay'}></div>
 
-				<Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-				<SearchBar searchBarOpen={searchBarOpen} setSearchBarOpen={setSearchBarOpen}/>
-			</header>
-		</React.Fragment>
-	);
-}
+        <SearchBar searchBarOpen={searchBarOpen} setSearchBarOpen={setSearchBarOpen} />
+      </header>
+    </React.Fragment>
+  );
+};
 
 export default Header3;
