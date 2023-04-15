@@ -1,62 +1,76 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { useRouter } from 'next/router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
 
-export default function BurgerMenus({setMenuOpen, menuOpen}) {
+export default function BurgerMenus({ setMenuOpen, menuOpen }) {
+  const [home, setHome] = useState(false);
+  const [service, setService] = useState(false);
+  const [blog, setBlog] = useState(false);
+  const [pages, setPages] = useState(false);
 
-	const [home, setHome] = useState(false)
-	const [service, setService] = useState(false)
-	const [blog, setBlog] = useState(false)
-	const [pages, setPages] = useState(false)
+  const router = useRouter();
+  const [path, setPath] = useState('');
+  useEffect(() => {
+    setPath(router.pathname);
+  }, [router]);
 
-	const router = useRouter()
-	const [path, setPath] = useState("")
-	useEffect(() => {
-		setPath(router.pathname)
-	}, [router])
+  const toggleMenu = (menu) => {
+    if (menu == 'home') {
+      setHome(!home);
+      setService(false);
+      setBlog(false);
+      setPages(false);
+    } else if (menu == 'service') {
+      setHome(false);
+      setService(!service);
+      setBlog(false);
+      setPages(false);
+    } else if (menu == 'blog') {
+      setHome(false);
+      setService(false);
+      setBlog(!blog);
+      setPages(false);
+    } else if (menu == 'pages') {
+      setHome(false);
+      setService(false);
+      setBlog(false);
+      setPages(!pages);
+    }
+  };
 
-	const toggleMenu = menu => {
-		
-		if( menu == 'home'){
-			setHome(!home)
-			setService(false)
-			setBlog(false)
-			setPages(false)
-		}
-		else if( menu == 'service'){
-			setHome(false)
-			setService(!service)
-			setBlog(false)
-			setPages(false)
-		}
-		else if( menu == 'blog'){
-			setHome(false)
-			setService(false)
-			setBlog(!blog)
-			setPages(false)
-		}
-		else if( menu == 'pages'){
-			setHome(false)
-			setService(false)
-			setBlog(false)
-			setPages(!pages)
-		}
-	}; 
+  return (
+    <div
+      className={
+        menuOpen
+          ? 'side-mobile-menu d-block d-xl-done d-lg-none open'
+          : 'side-mobile-menu d-block d-xl-done d-lg-none'
+      }>
+      <div className="close-mobile-menu" onClick={() => setMenuOpen(false)}>
+        <span>
+          <i>
+            <FontAwesomeIcon icon={['fas', 'times']} />
+          </i>
+        </span>
+      </div>
+      <div className="mm-menu">
+        <ul>
+          <li className={path === '/' ? 'active' : ''}>
+            <Link href="/" as="/">
+              <a>Home</a>
+            </Link>
+          </li>
 
-	
-
-
-	return (
-		<div className={menuOpen ? "side-mobile-menu d-block d-xl-done d-lg-none open": "side-mobile-menu d-block d-xl-done d-lg-none"}>
-			<div className="close-mobile-menu" onClick={() => setMenuOpen(false)}>
-				<span><i><FontAwesomeIcon icon={['fas', 'times']}/></i></span>
-			</div>
-			<div className="mm-menu">
-				<ul>
-					<li className={home ? "has-droupdown active" : "has-droupdown"}>
-						<a onClick={() => { toggleMenu('home') }}>home</a>
-						<ul className={home ? "sub-menu active" : "sub-menu"}>
+          {/* <li className={home ? 'has-droupdown active' : 'has-droupdown'}>
+            <a
+              onClick={() => {
+                toggleMenu('home');
+              }}>
+              <Link href="/" as="/">
+                <a>Home</a>
+              </Link>
+            </a> 
+            <ul className={home ? "sub-menu active" : "sub-menu"}>
 							<li className={path === "/" ? "active" : ""}>
 								<Link href="/" as="/" ><a>Home 1</a></Link>
 							</li>
@@ -66,21 +80,21 @@ export default function BurgerMenus({setMenuOpen, menuOpen}) {
 							<li className={path === "/home-3" ? "active" : ""}>
 								<Link href="/home-3" as="/home-3" ><a>Home 3</a></Link>
 							</li>
-						</ul>
-					</li>
-					<li className={path === "/about" ? "active" : ""}>
+						</ul> 
+          </li> */}
+          {/* <li className={path === "/about" ? "active" : ""}>
 						<Link href="/about" as="/about" ><a>About</a></Link>
 					</li>
 					<li className={path === "/services" ? "active" : ""}>
 						<Link href="/services" as="/services" ><a>Services</a></Link>
 					</li>
 					<li className={path === "/shop" ? "active" : ""}>
-						<Link href="/shop" as="/shop" ><a>shop</a></Link>
+						<Link href="/shop" as="/shop" ><a>Shop</a></Link>
 					</li>
 					<li className={path === "/blog" ? "active" : ""}>
 						<Link href="/blog" as="/blog" ><a>Blog</a></Link>
-					</li>
-					<li className={pages ? "has-droupdown active" : "has-droupdown"}>
+					</li> */}
+          {/* <li className={pages ? "has-droupdown active" : "has-droupdown"}>
 						<a onClick={() => {toggleMenu("pages") }}>Pages</a>
 						<ul className={pages ? "sub-menu active" : "sub-menu"}>
 							<li className={path === "/gallery-1" ? "active" : ""}>
@@ -144,16 +158,14 @@ export default function BurgerMenus({setMenuOpen, menuOpen}) {
 								</Link>
 							</li>
 						</ul>
-					</li>
-					<li className={path === "/contact" ? "active" : ""}>
-						<Link href="/contact" as="/contact">
-							<a>Contact</a>
-						</Link>
-					</li>
-				</ul>
-			</div>
-		</div>
-	)
+					</li> */}
+          <li className={path === '/contact' ? 'active' : ''}>
+            <Link href="/contact" as="/contact">
+              <a>Contact</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
-
-
