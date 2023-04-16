@@ -48,7 +48,7 @@ const Brand = () => {
                   <div className="col-xl-12">
                     <div className="brans-img text-center">
                       <img
-                        src={require('../../../public/assets/img/brand/global-gap.png')}
+                        src={require('../../../public/assets/img/brand/global-gap-logo.png')}
                         alt="brand"
                       />
                     </div>
@@ -80,7 +80,7 @@ const Brand = () => {
                   <div className="col-xl-12">
                     <div className="brans-img text-center">
                       <img
-                        src={require('../../../public/assets/img/brand/fssc-22000.png')}
+                        src={require('../../../public/assets/img/brand/fssc-logo.png')}
                         alt="brand"
                       />
                     </div>
