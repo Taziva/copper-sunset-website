@@ -17,9 +17,8 @@ class H1CtaSection extends Component {
                 <div className="cta-text">
                   <h1>Looking for fresh produce?</h1>
                   <p>
-                    We are looking for wholesalers, supermarkets, shops, restaurants, and
-                    foodservice providers to collaborate with. If you need fresh produce feel free
-                    to get in contact.
+                    We supply fresh produce to wholesalers, supermarkets, shops, restaurants, and
+                    foodservice providers. If you need fresh produce feel free to get in contact.
                   </p>
                 </div>
               </div>
