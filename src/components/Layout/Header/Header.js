@@ -45,9 +45,9 @@ const Header = () => {
                 </div>
               </div>
               <div className="col-xl-10 col-lg-10 d-none d-xl-block d-lg-block">
-                {/* <div className="header-right f-right">
-									<ul>
-										<li className="search-icon">
+                <div className="header-right f-right">
+                  <ul>
+                    {/*<li className="search-icon">
 											<a href="#" onClick={() => setSearchBarOpen(!searchBarOpen)}>
 												<i className="dripicons-search"></i>
 											</a>
@@ -62,14 +62,14 @@ const Header = () => {
 												<i className="dripicons-cart"></i>
 											</a>
 											<span>2</span>
-										</li>
-										<li className={sidebarOpen ? "info-bar active" : "info-bar"}>
-											<a href="#" onClick={() => setSidebarOpen(!sidebarOpen)}>
-												<i className="dripicons-vibrate"></i>
-											</a>
-										</li>
-									</ul>
-								</div> */}
+										</li>*/}
+                    <li className={sidebarOpen ? 'info-bar active' : 'info-bar'}>
+                      <a href="#" onClick={() => setSidebarOpen(!sidebarOpen)}>
+                        <i className="dripicons-vibrate"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
                 <div className="main-menu text-right f-right">
                   <nav id="mobile-menu">
                     <ul>
