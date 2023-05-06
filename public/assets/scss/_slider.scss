@@ -34,18 +34,35 @@
 }
 .slider-button a.btn.secondary {
   margin-right: 25px;
-  background: #fff;
-  color: #408858;
-  border: 2px #408858 solid;
-  box-sizing: content-box;
+  background: #fab522;
 }
+
 .slider-button a.btn.active {
   background: #fab522;
   margin-left: 25px;
 }
+.slider-button a.btn.secondary::before {
+  background: #ef491a;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 50% 0 0;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  z-index: -1;
+  border-radius: 0;
+}
+a.btn.secondary:hover::before {
+  transform: scaley(1);
+}
 .slider-button a.btn.secondary.active {
   margin-right: 25px;
-  background: #408858;
+  background: #ef491a;
 }
 .slider-content-3 h1 {
   color: #fff;
