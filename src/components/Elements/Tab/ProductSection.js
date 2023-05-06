@@ -6,7 +6,7 @@ import Link from 'next/link';
 class ProductSection extends Component {
   render() {
     return (
-      <div className="product-area pos-relative pt-110 pb-85 fix">
+      <div id="products" className="product-area pos-relative pt-110 pb-85 fix">
         <div className="shape spahe1 bounce-animate">
           <img src={require('../../../../public/assets/img/shape/shape1.png')} alt="shape" />
         </div>

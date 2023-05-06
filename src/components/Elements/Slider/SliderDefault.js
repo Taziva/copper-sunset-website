@@ -85,25 +85,24 @@ const SliderDefault = () => {
                 <div className="col-xl-12">
                   <div className="slider-content mt-85">
                     <h1 data-animation="fadeInUp" data-delay=".6s">
-                      Supplying Nature's Best, <br /> Worldwide
+                      Supplying fresh produce, <br /> worldwide
                     </h1>
                     <p data-animation="fadeInUp" data-delay=".8s">
-                      At Copper Sunset, we are passionate about bringing the freshest, highest
-                      quality produce to customers all around the globe. We take pride in every step
-                      of the journey to ensure that our produce is not only delicious, but also
-                      ethically and sustainably sourced.
+                      We supply fruit and vegetables worldwide. We take pride in every step of the
+                      journey to ensure that our produce is not only delicious, but also ethically
+                      and sustainably sourced.
                     </p>
                     <div className="slider-button">
-                      <Link href="/contact" as="/contact">
+                      <Link href="#products" as="#products">
                         <a data-animation="fadeInLeft" data-delay=".8s" className="btn">
-                          Contact Us
+                          Browse Products
                         </a>
                       </Link>
-                      {/* <Link href="/contact" as="/contact" >
-                                                <a data-animation="fadeInRight" data-delay="1s" className="btn active">
-                                                    Our Services
-                                                </a>
-                                            </Link> */}
+                      <Link href="/contact" as="/contact">
+                        <a data-animation="fadeInRight" data-delay="1s" className="btn secondary">
+                          Contact us
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
