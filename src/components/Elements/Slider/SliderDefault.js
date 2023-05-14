@@ -77,13 +77,15 @@ const SliderDefault = () => {
           <div
             className="slider-height  d-flex align-items-center"
             style={{
-              backgroundImage: `url(${'assets/img/slider/pexels-vanessa-loring-5965671.jpg'})`
+              backgroundImage: `url(${'assets/img/slider/slider-background.jpg'})`,
+              backgroundSize: 'contain'
             }}
             alt="Photo by Vanessa Loring: https://www.pexels.com/photo/assorted-yellow-fruits-and-vegetables-5965671/">
             <div className="container">
               <div className="row ">
                 <div className="col-xl-12">
                   <div className="slider-content mt-85">
+                    <div className="slider-content-box"></div>
                     <h1 data-animation="fadeInUp" data-delay=".6s">
                       Supplying fresh produce, <br /> worldwide
                     </h1>
