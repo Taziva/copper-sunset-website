@@ -78,9 +78,9 @@ const SliderDefault = () => {
             className="slider-height  d-flex align-items-center"
             style={{
               backgroundImage: `url(${'assets/img/slider/slider-background.jpg'})`,
-              backgroundSize: 'contain'
+              backgroundSize: 'cover'
             }}
-            alt="Photo by Vanessa Loring: https://www.pexels.com/photo/assorted-yellow-fruits-and-vegetables-5965671/">
+            alt="Photo by karina zhukovskaya: https://www.pexels.com/photo/basket-full-of-colorful-fruits-and-vegetables-11631746/">
             <div className="container">
               <div className="row ">
                 <div className="col-xl-12">
