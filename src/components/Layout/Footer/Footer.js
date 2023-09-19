@@ -141,7 +141,7 @@ const Footer = () => {
                 <div className="copyright text-center">
                   <p>
                     Copyright <FontAwesomeIcon icon={['far', 'copyright']} /> 2023{' '}
-                    <a href="#">Copper Sunset</a>. All Rights Reserved
+                    <a href="#">Copper Sunset</a> by Taziva Ltd. All Rights Reserved
                   </p>
                 </div>
               </div>
